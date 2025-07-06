@@ -6,3 +6,10 @@ class GetUser(BaseModel):
 
     id: int
     nickname: str
+
+
+class GetUserRoom(BaseModel):
+    model_config = ConfigDict(from_attributes=True)
+
+    user_id: int
+    room_id: int
